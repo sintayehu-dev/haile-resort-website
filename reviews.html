@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Reviews</title>
+</head>
+<style>
+	*{
+		box-sizing: border-box;
+	
+	}
+	.reviews {
+  margin: 20px;
+	align-items: center;
+	text-align: center;
+	padding: 50px;
+	margin: 0px;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(189, 216, 207, 0.836);
+}
+
+.review {
+  padding: 10px;
+  border: 1px solid black;
+  margin: 10px 0;
+}
+
+.review h4 {
+  margin-top: 0;
+}
+
+.review p {
+  margin-bottom: 0;
+}
+
+#add-review-form {
+  border: 1px solid black;
+	display: block;
+  padding: 10px;
+  width: 50%;
+	position: relative;
+	left: 270px;
+
+}
+.footer{
+	background-color: purple;
+text-align: center;	
+	margin: 0;
+	height: 80px;
+	padding-top: 20px;
+}
+.label {
+	display: block;
+	margin: 20px;
+	font-weight: bold;
+}
+.reviews h2{
+	text-transform: uppercase;
+	border: 0px solid rgb(212, 12, 212);
+}
+.reviews h2:hover{
+ background-color: rgb(212, 12, 212);
+ color: white;
+
+}
+.submit{
+	width: 100px;
+	height: 50px;
+	background-color:rgb(212, 12, 212);
+	border-radius: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+
+}
+.submit:hover{
+	text-transform: uppercase;
+	color: white;
+}
+#message{
+	width: 250px;
+	height: 70px;
+	
+
+}
+ul{
+	display: block;
+}
+
+</style>
+<body>
+	<div class="reviews">
+		<h2>Customer Reviews</h2>
+		<ul id="review-list">
+			<!-- reviews will be dynamically added here -->
+		</ul>
+		<form id="add-review-form">
+			<div class="label">
+			<h3>Add Your Own Review</h3>
+			<label  for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			<br> <br>
+			<label for="rating">Rating:</label>
+			<select id="rating" required name="rating">
+				<option value="">--Select One--</option>
+				<option value="1">1 Star</option>
+				<option value="2">2 Stars</option>
+				<option value="3">3 Stars</option>
+				<option value="4">4 Stars</option>
+				<option value="5">5 Stars</option>
+			</select>
+			<br> <br>
+			<label for="message" >Message:</label>
+			<textarea id="message" required name="feedback"></textarea>
+			<br>
+			<button class="submit" name="submit" type="submit">Submit Review</button>
+		</div>
+		</form>
+	</div>
+	
+	
+	<footer class="footer">
+		<p>© 2023 Haile Resort Reviews</p>
+	</footer>
+</body>
+<script>
+
+const reviewList = document.getElementById('review-list');
+const addReviewForm = document.getElementById('add-review-form');
+
+// function to add a review to the list
+function addReview(name, rating, message) {
+  const li = document.createElement('li');
+  li.classList.add('review');
+  li.innerHTML = `
+    <h4>${name} - ${rating} Stars</h4>
+    <label>${message}</label>
+  `;
+  reviewList.appendChild(li);
+}
+
+// event listener for form submission
+addReviewForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent default form behavior
+  const name = document.getElementById('name').value;
+  const rating = document.getElementById('rating').value;
+  const message = document.getElementById('message').value;
+  addReview(name, rating, message);
+  addReviewForm.reset(); // reset form inputs
+});
+
+</script>
+</html>

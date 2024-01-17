@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylesfile.css">
+    <title>Document</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .about {
+       background-image:url('images/Haile-Hotels-and-Resorts-CEO-ethiopia-haile.jpeg');
+       background-size : cover;
+       background-position: center;
+       width: 100%;
+       height: 100vh;
+
+      
+      }
+      .title {
+        margin: 20px;
+        position:absolute;
+        top: 30px;
+        left:650px;
+        border:2px solid white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px 2px black;
+        font-size: 15px;
+        
+      }
+      .title:hover{
+        background-color: purple;
+        color: white;
+      }
+      .title .my_title{
+        font-size: 20px;
+        padding-left: 10px;
+      }
+      .button {
+        background-color: rgb(133, 23, 114);
+        padding: 15px 18px;
+        box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+        transition: 0.4s;
+        color: white;
+         text-transform: uppercase;
+      }
+      .button:hover{
+        color: black;
+        background-color: aliceblue;
+      }
+      .my_title{
+       display: inline-block;
+       font-size: 25px;
+       color: azure;  
+    }
+   .my_title:first-letter{
+    font-size: 120px;
+   }
+   #attract,
+   #fddr,
+   #trans {
+    font-size: 10px;
+    display: none;
+    color: rgb(13, 14, 14);
+   }
+   #attract.active,
+   #fddr.active,
+   #trans.active {
+    display: block;
+   }
+   .row{
+     margin-top: 70px;
+     display: flex;
+     justify-content: space-around;
+     width: 100%;
+     height: 100%;
+     margin-bottom: 100px;
+
+   }
+
+    </style>
+  <script>
+      function changeData(parameter) {
+    if(parameter==0) {
+        document.getElementById('attract').classList.toggle('active');
+    } else if(parameter==1) {
+      document.getElementById('fddr').classList.toggle('active');
+    } else {
+     document.getElementById('trans').classList.toggle('active');
+  }
+}
+    </script> 
+</head>
+<body>
+  <a href="home_page.html" title="back to home page" style="z-index: 2; position:fixed;top:10;left:10">
+    <img src="images/back.jfif" width="50" height="50" alt="" >
+</a>
+  <div class="about">
+    <h1 style = "color:azure; text-align: center; margin-left: 500px; ">About Us</h1>
+    <div class="title">
+      <p class =  "my_title">Haile Resort-Arba Minch, set in Migie, 70 Secha, is a 110 room four-star resort located at a grand view overlooking the twin lakes of Abaya and Chamo along the beautiful evergreen vegetation, chain of mountains that form the most beautiful pattern offering some units with mountain views. The resort is an all inclusive concept to its guests & offers a 4-star accomodation with a garden, a shared lounge and a bar, free shuttle service, room service and free Wi-Fi, an outdoor swimming pool, fitness centre, sauna, evening entertainment and a kids club with children's playground.<br/><br/>At the resort all rooms include air conditioning, a desk, a terrace with a garden view, a private bathroom, a flat-screen TV, bed linen & towels. All guest rooms will provide guests with a fridge.<br/><br/>Guests at the accomdation can enjoy a buffet breakfast in which the resort serves scrumptious American, French and Ethiopian Cuisine (Vegetarian and Vegan options can also be requested as well.). The Nearest airport is Arba Minch Airport, which is 5 km away from the resort. </p>
+    </div>
+
+  </div>
+ <div class="row">
+  <button class = "button" onclick = "changeData(0)">Attactions</button>
+<div id = "attract">
+    <h1>Top Attraction Sites</h1>
+    <p><b>Crocodile Market Lake Chamo                11 km</b></p>
+    <h1>What's Nearby?</h1>
+  <p><b>Nechisar National Park 1.1 km</b></p>
+  <p><b>Meskel Square 2.6km</b></p>
+  </div>
+  <button class = "button" onclick = "changeData(1)">Foods and Drinks</button>
+  <div id = "fddr">
+    <h1>Restaurants and Bars</h1>
+  <p>Lamabdina Bar & Restaurant</p>
+  <p>Hore Bar & Restaurant</p>
+  <p>Mami Bar & Restaurant</p>
+  <h1>Cafes & Bars</h1>
+ <p>Juice</p> 
+  <p>Cafeteria</p> 
+  <p>Zebib</p>
+  <h1>Super Markets & Groceries</h1>
+  <P>Whole Foods</P>
+  <p>Market</p>
+  </div>
+  <button class = " button" onclick = "changeData(2)">Transport</button>
+  <div id = "trans">
+    <h1>Closest Airports</h1>
+    <p>Arba Minch Airport(AMH)</p>
+ 
+ </div>
+</div> 
+<div>
+  <footer>
+    <p>&copy; 2023 Haile Hotel and Resort</p>
+  </footer>
+</div>
+</body>
+</html>

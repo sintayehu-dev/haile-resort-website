@@ -1,0 +1,91 @@
+.form_container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 60px;
+    background: rgb(252, 251, 252);
+}
+
+.form_container form {
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 5px 10px rgba(0, 0,0, 0.1);
+background: white;
+text-align: center;
+width: 550px;
+}
+
+.form_container form h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #333;
+    
+}
+.form_container form input {
+    width: 95%;
+    padding: 10px 15px;
+    font-size: 17px;
+    margin: 8px 0;
+    background: #fff;
+}
+.form_container form .form-btn {
+    background: #ffffff;
+    color: rgb(193, 20, 220);
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+
+
+}
+.form_container form .form-btn:hover {
+  background: rgb(212, 12, 219);
+  color: #ffffff;
+
+}
+.form_container form p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #837272;
+
+}
+.form_container form p a {
+    color: rgb(201, 29, 213);
+}
+.form_container form .error-msg {
+    margin: 10px 0;
+    display: block;
+    background: rgb(238, 18, 223);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+
+}
+
+.customer {
+    min-height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 60px;
+    background: rgb(176, 172, 172);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0,0, 0.1);
+    background: rgb(235, 229, 229);
+    text-align: center;
+    width: 550px;
+}
+.customer a{
+    display: block;
+    padding: 20px;
+    margin: 20px;
+    text-decoration: none;
+    
+
+}
+

@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(hr5.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.main::before{
+content: "";
+display: block;
+background-color: rgba(0, 0, 0, 0.5);
+position: absolute;
+top: 80px;
+right: 0;
+bottom: 0;
+left: 0;
+}
+.home{
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(243, 237, 237);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   
+   
+}
+.bar{
+    display: none;
+}
+.home li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.home li a{
+    text-decoration: none;
+    color: purple;
+    font-size: 17px;
+    
+   
+}
+.home h2{
+    text-transform: uppercase;
+}
+.home ul li a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: purple;
+    display: block;
+
+}
+.navgate img{
+    display: none;
+}
+.home ul li a:hover::after{
+    width: 100%;
+    transition: 1s;
+}
+.home ul li a:hover{
+    color:black;
+   
+}
+.img img{
+    width: 150px;
+    height: 60px;
+}
+.btn{
+    padding: 12px 18px;
+}
+.text{
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    z-index: 10;
+}
+.btn1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 40px;
+}
+.btn1 a{
+    align-items: center;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    background:transparent;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+.btn1 a:hover{
+ 
+  background-color: purple;
+  color: white;
+  border: 1px solid purple;
+}
+@media(max-width:700px){
+    .navgate{
+        width: 200px;
+        height: 100%;
+        background-color: rgb(243, 237, 237);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        transition: 1s;
+        z-index: 100000;
+        padding: 20px;
+        
+        
+    }
+    .navgate img{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: block;
+        background-color: purple;
+        border: 1px solid purple;
+    }
+.navgate ul{
+display: flex;
+flex-direction: column;
+}
+.text{
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+.bar{
+    z-index: 100;
+    display: block;
+    cursor: pointer;
+    
+}
+/*.navgate img{
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+}*/
+.bar img{
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 30px;
+    height: 25px;
+
+    margin-right: 10px;
+    background-color: purple;
+    border: 1px solid purple;
+    padding: 4px;
+}
+.home{
+    width: 100%;
+    padding: 0px;
+}
+.img img{
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+}
+}

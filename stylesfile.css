@@ -1,0 +1,175 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h1{
+  font-family: 'Kaushan Script',cursive;
+
+}
+header, nav, main, footer {
+  padding: 1em;
+  display: block;
+}
+#sidenav{
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  right: -250px;
+  top: 0;
+  background:#9c079c;
+  z-index: 2;  
+  transition: 0.5s; 
+}
+nav ul li{
+  list-style: none;
+  margin: 50px 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+#menubtn {
+  width: 50px;
+  height: 50px;
+  background: #b405b4;
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top:20px;
+  border-radius: 3px;
+  z-index: 3;
+  cursor: pointer;
+}
+#menubtn img{
+ width: 20px;
+ margin-top:15px ;
+}
+header {
+  background-color: hsl(304, 87%, 30%);
+  color: #fff;
+  text-align: center;
+}
+#menubtn{
+width: 50px;
+height: 50px;  
+background: #eb1ac1;
+text-align: center;
+position: fixed;
+right: 30px;
+top: 20px;
+border-radius: 3px;
+z-index: 3;
+cursor: pointer;
+}
+#menubtn img {
+  width: 20px;
+  margin-top: 15px;
+  
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 50px 20px;
+
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+  color: #fffbfb;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+#search-box {
+  display: flex;
+  align-items: center;
+  margin-left: 850px;
+}
+
+#search-box input[type="text"] {
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+}
+
+#search-box button {
+  margin-left: 0.5em;
+  padding: 0.5em;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+main section {
+  padding: 1em;
+}
+
+main section h2 {
+  text-align: center;
+}
+
+.rooms-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.rooms-list li {
+  display: block;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 1em;
+  width: calc(100% / 3 - 1em);
+  
+}
+
+
+.rooms-list li img {
+  width: 100%;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+
+}
+
+.rooms-list li h3 {
+  margin: 0;
+}
+
+.rooms-list li p {
+  margin-top: 0;
+}
+
+.rooms-list li button {
+  margin-top: 1em;
+  padding: 0.5em;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #8d0b78;
+  color: #fff;
+  text-align: center;
+}
+
